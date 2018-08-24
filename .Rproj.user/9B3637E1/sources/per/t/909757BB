@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1535034070658.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4035622304",
+    "id" : "909757BB",
+    "lastKnownWriteTime" : 1535119292,
+    "last_content_update" : 1535119292364,
+    "path" : "~/blogdown_source/content/post/2018-08-23-visualising-government-expenditure-data-with-ggplot2.Rmd",
+    "project_path" : "content/post/2018-08-23-visualising-government-expenditure-data-with-ggplot2.Rmd",
+    "properties" : {
+        "cursorPosition" : "12,1",
+        "scrollLine" : "11"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

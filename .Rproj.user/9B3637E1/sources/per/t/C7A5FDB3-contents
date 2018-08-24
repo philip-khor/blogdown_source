@@ -1,0 +1,5 @@
+theme = "hugo-paper"
+baseURL = "http://philip-khor.github.io/"
+languageCode = "en-us"
+title = "Philip's Curve"
+publishDir = "C:/Users/Philip/Documents/phikh.github.io/philip-khor.github.io"

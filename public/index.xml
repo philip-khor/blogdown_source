@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Philip&#39;s Curve</title>
+    <link>/</link>
+    <description>Recent content on Philip&#39;s Curve</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Visualising government expenditure data with ggplot2</title>
+      <link>/post/visualising-government-expenditure-data-with-ggplot2/</link>
+      <pubDate>Fri, 24 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/visualising-government-expenditure-data-with-ggplot2/</guid>
+      <description>I thought I’d practice my rusty R skills when I came across a post by Khairil Yusof on the Sinar Project Facebook group that Malaysian Administrative Modernisation and Management Planning Unit (MAMPU) has made data on development expenditure over time available on data.gov.my. I haven’t paid close enough attention to government budgets to have much comments about the trends, but a comment can be found here. Tl;dr, the authors note that Malaysia’s stagnating development expenditure is concerning since Malaysia is a developing economy.</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <description>Just a quick test post to make sure everything’s going alright :)</description>
+    </item>
+    
+  </channel>
+</rss>
