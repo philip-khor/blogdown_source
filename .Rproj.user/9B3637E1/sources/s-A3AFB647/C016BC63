@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1535176514484.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C016BC63",
+    "lastKnownWriteTime" : 1535207546,
+    "last_content_update" : 1535207580165,
+    "path" : "~/blogdown_source/blogdown_source/content/post/2018-08-25-exploring-ge14-results-with-python.md",
+    "project_path" : "content/post/2018-08-25-exploring-ge14-results-with-python.md",
+    "properties" : {
+        "cursorPosition" : "56,62",
+        "scrollLine" : "55"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "markdown"
+}
