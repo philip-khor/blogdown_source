@@ -10,7 +10,7 @@ tags:
   - malaysia
 ---
 
-There's an interesting blog post up on [DataTarik](https://datatarik.com/home/2018/8/21/exploring-ge14-with-data-science-part-1) about using random forests models to model the outcomes of Malaysia's 14th general election (GE14). While I have my reservations about their machine learning approach, I think it's an interesting dataset, so I downloaded their [data](https://github.com/khoo-j/MsiaGE14/blob/master/GE14_Age-Ethnicity-bySeats.xlsx) and [code](https://github.com/khoo-j/MsiaGE14/blob/master/Random_Forest_2018-Age%20and%20Ethnicity.ipynb) and played around with it in Python.
+There's an interesting blog post up on [DataTarik](https://datatarik.com/home/2018/8/21/exploring-ge14-with-data-science-part-1) about using random forests to model the outcomes of Malaysia's 14th general election (GE14). While I have my reservations about their machine learning approach, I think it's an interesting dataset, so I downloaded their [data](https://github.com/khoo-j/MsiaGE14/blob/master/GE14_Age-Ethnicity-bySeats.xlsx) and [code](https://github.com/khoo-j/MsiaGE14/blob/master/Random_Forest_2018-Age%20and%20Ethnicity.ipynb) and played around with it in Python.
 
 For those not familiar with Malaysia, some background: 
 
@@ -59,7 +59,7 @@ With the data we have, there are two stories to be told:
 * **Voting behaviour by age**: 
     + Not very clear pattern for age - at least not with the boxplot
     + PAS wins in 'younger' constituencies (higher pct 21-30, 31-40)
-    + PAS wins are very uniform in terms of age and ethnicity demographics! 
+    + PAS wins are very uniform in terms of age and ethnicity demographics
 
 
 ```python
