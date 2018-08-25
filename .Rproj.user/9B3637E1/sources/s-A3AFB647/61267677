@@ -1,24 +1,24 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1535033557607.000,
+    "created" : 1535208926030.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
-    "id" : "C7A5FDB3",
-    "lastKnownWriteTime" : 1535208441,
-    "last_content_update" : 1535208441,
+    "hash" : "219972086",
+    "id" : "61267677",
+    "lastKnownWriteTime" : 1535208933,
+    "last_content_update" : 1535208933167,
     "path" : "~/blogdown_source/blogdown_source/config.toml",
     "project_path" : "config.toml",
     "properties" : {
-        "cursorPosition" : "5,0",
+        "cursorPosition" : "5,32",
         "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 1,
+    "relative_order" : 2,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "toml"
