@@ -159,20 +159,15 @@ pd.crosstab(ge14[peninsula].target, ethnicity)
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: center;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
-      <th>col_0</th>
+    <tr style="text-align: center;">
+      <th></th>
       <th>Cina (%)</th>
       <th>Melayu (%)</th>
-    </tr>
-    <tr>
-      <th>target</th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -214,25 +209,19 @@ pd.crosstab(ge14[peninsula].target, age)
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: center;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
-      <th>col_0</th>
+    <tr style="text-align: center;">
+      <th></th>
       <th>21 - 30 (%)</th>
       <th>31 - 40 (%)</th>
       <th>41 - 50 (%)</th>
       <th>51 - 60 (%)</th>
     </tr>
-    <tr>
-      <th>target</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
+
   </thead>
   <tbody>
     <tr>
@@ -278,24 +267,17 @@ pd.crosstab(ge14[np.invert(peninsula)].target, ethnicity)
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: center;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
-      <th>col_0</th>
+    <tr style="text-align: center;">
+      <th></th>
       <th>Bumiputera Sabah (%)</th>
       <th>Bumiputera Sarawak (%)</th>
       <th>Cina (%)</th>
       <th>Melayu (%)</th>
-    </tr>
-    <tr>
-      <th>target</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -361,22 +343,16 @@ pd.crosstab(ge14[np.invert(peninsula)].target, age)
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: center;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
-      <th>col_0</th>
+    <tr style="text-align: center;">
+      <th></th>
       <th>31 - 40 (%)</th>
       <th>41 - 50 (%)</th>
       <th>51 - 60 (%)</th>
-    </tr>
-    <tr>
-      <th>target</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
