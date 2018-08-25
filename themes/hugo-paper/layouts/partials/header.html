@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="renderer" content="webkit">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <!-- Title -->
   <title>
     {{- if not .IsHome }}
@@ -47,7 +48,7 @@
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
         <li class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }}">
-          <a href="{{ .URL }}">{{ .Name }}</a>
+          <a href="{{ .URL }}">{{ .Pre }} {{ .Name }}</a>
         </li>
         {{ end }}
       </ul>

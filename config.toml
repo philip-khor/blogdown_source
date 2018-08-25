@@ -4,3 +4,18 @@ languageCode = "en-us"
 title = "Philip's Curve"
 publishDir = "C:/Users/Philip/Documents/phikh.github.io/philip-khor.github.io"
 disqusShortname = "philips-curve"
+
+[menu] 
+  [[menu.main]] 
+    identifier = "twitter"
+    name = "twitter"
+    pre = '<i class="fab fa-twitter"></i>'
+    url = "https://twitter.com/philip_khor"
+    
+  [[menu.main]]
+    identifier = "linkedin"
+    name = "linkedin"
+    pre = '<i class="fab fa-linkedin-in"></i>'
+    url = "https://www.linkedin.com/in/khorp/"
+    
+    
