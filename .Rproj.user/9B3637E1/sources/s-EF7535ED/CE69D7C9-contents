@@ -289,7 +289,7 @@ This estimate is OK assuming there are no confounders for the relationship betwe
 
 Interpreting feature importance metrics should be done with caution, particularly with random forests. The results suggest that there is interaction within and between age and ethnicity variables that contributes to electoral performance. The way I think of it, there are age-race combinations that are important contributors to electoral performance. Random Forests help with detecting interactions, however it's not clear how these can be disentangled in feature importances metrics. 
     
-Also, the effect of demography could be reflective of unmeasured confounders. Without carefully considering the determinants of electoral performance, it's not clear if demography is of such critical importance to elctoral outcomes. 
+Also, the effect of demography could be reflective of unmeasured confounders. Without carefully considering the determinants of electoral performance, it's not clear if demography is of such critical importance to electoral outcomes. 
 
 Notes: 
 
