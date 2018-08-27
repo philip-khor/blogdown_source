@@ -93,7 +93,7 @@ To get a more interpretable model, we can use a decision tree model to fit the d
 
 There is a potential use case for principal component analysis (PCA) here. Perhaps PCA can identify demographic patterns among the age and race variables. The figure below shows the ethnic breakdown from an inverse transformation of the first principal component. This is done by first transforming the ethnic variables by `scikit-learn`'s `PCA` implementation, then using `scikit-learn`'s `inverse_transform` function to transform the data back to its original space. This gives us an idea of what the first principal component is picking up in the data. 
 
-I haven't investigated the data exhaustively, so I've picked 5 random observations within the range of the first principal component and sorted them to have some sense of representativeness. It looks like the first principal component captures a spectrum of constituency groups from high-Chinese constituencies to high-Sabahan constituencies. Note that the first principal component only captures 28% of the variance. 
+I haven't investigated the data exhaustively, so I've picked 5 random numbers within the range of the first principal component and sorted them to have some sense of representativeness. It looks like the first principal component captures a spectrum of constituency groups from high-Chinese constituencies to high-Sabahan constituencies. Note that the first principal component only captures 28% of the variance. 
 
 ![](/img/output_97_1.png)
 ![](/img/output_97_3.png)
@@ -287,7 +287,7 @@ This estimate is OK assuming there are no confounders for the relationship betwe
 
 # Conclusions
 
-Interpreting feature importance metrics should be done with caution, particularly with random forests. The results suggest that there is interaction within and between age and ethnicity variables that contributes to electoral performance. The way I think of it, there are age-race combinations that are important contributors to electoral performance. Random Forests help with detecting interactions, however it's not clear how this is captured in feature importances metrics. 
+Interpreting feature importance metrics should be done with caution, particularly with random forests. The results suggest that there is interaction within and between age and ethnicity variables that contributes to electoral performance. The way I think of it, there are age-race combinations that are important contributors to electoral performance. Random Forests help with detecting interactions, however it's not clear how this is can be disentangled in feature importances metrics. 
     
 Also, the effect of demography could be reflective of unmeasured confounders. Without carefully considering the determinants of electoral performance, it's not clear if demography is of such critical importance to elctoral outcomes. 
 
