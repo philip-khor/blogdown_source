@@ -90,7 +90,7 @@ Using `scipy`'s `entropy` function, I try to determine which parties win in ethn
 * PH also wins across diverse and non-diverse constituencies, but its median constituency is more diverse than BN's median constituency. 
 * PAS wins in non-diverse constituencies. 
 
-The diversity index used here is the Shannon entropy index, given by $$H'=-\Sigma p_i \log{p_i}$$ The exponent of $H'$ has a nice interpretation. It is the effective number of species, i.e. how many species there would be if each species had an equal amount of observations. You can convince yourself that this is true by running the code `exp(-(0.5*log(0.5)+0.5*log(0.5)))` (in R), which should return the result 2, meaning the diversity in the data is effectively two equally sized classes.
+The diversity index used here is the Shannon entropy index, given by `$$H'=-\Sigma p_i \log{p_i}$$` The exponent of `$H'$` has a nice interpretation. It is the effective number of species, i.e. how many species there would be if each species had an equal amount of observations. You can convince yourself that this is true by running the code `exp(-(0.5*log(0.5)+0.5*log(0.5)))` (in R), which should return the result 2, meaning the diversity in the data is effectively two equally sized classes.
 
 
 ```python
