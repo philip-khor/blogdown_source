@@ -267,7 +267,7 @@ The F-stat is provided for the first stage: a rule of thumb is to have an F-stat
 
 ![](/img/dagitty-model.png)
 
-* Estimating the effect of 'race' conditional on ethnicity (and vice versa) gives me larger effects. This suggests that there's attenuation bias from omitting controls. These are 'good' estimates if race and age are not independent.  
+* Estimating the effect of 'race' conditional on age (and vice versa) gives me larger effects. This suggests that there's attenuation bias from omitting controls. These are 'good' estimates if race confounds age, or age confounds race.  
 
 |&nbsp;|Race|Age|
 |-----|----|---|
