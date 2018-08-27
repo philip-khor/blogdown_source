@@ -20,7 +20,7 @@ DataTarik used feature importances from random forests to conclude that
 * The 'most important' ethnic composition appears to be Chinese
 * Ethnicity as a whole is related to election outcomes.
 
-I argue here that demography considered jointly bears a greater relation to election outcomes. 
+I argue here that demography considered jointly has a greater relationship with election outcomes. 
 
 # Introduction 
 Here are the feature variables expressed as a correlation matrix and visualised in a heatmap.
