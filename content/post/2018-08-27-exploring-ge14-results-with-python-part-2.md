@@ -253,7 +253,7 @@ To be on the safe side, I assume a linear probability model, where the outcome o
 
 And since I can't figure out how to properly construct my standard errors, you'll just have to make do with estimates. 
 
-The F-stat is provided for the first stage: the rule of thumb is to have an F-stat which exceeds 10 (sometimes 20). The F-stat tests whether the instrument is 'relevant'. 
+The F-stat is provided for the first stage: a rule of thumb is to have an F-stat which exceeds 10. The F-stat tests whether the instrument is 'relevant'. 
 
 * I write two functions: `lw` and `lw_controls`: one function provides the L-W estimate without controls, and the other with controls. 
 * My training set is similar to the previous training set for the multinomial logit. 
@@ -289,7 +289,7 @@ This estimate is OK assuming there are no confounders for the relationship betwe
 
 Interpreting feature importance metrics should be done with caution, particularly with random forests. The results suggest that there is interaction within and between age and ethnicity variables that contributes to electoral performance. The way I think of it, there are age-race combinations that are important contributors to electoral performance. Random Forests help with detecting interactions, however it's not clear how these can be disentangled in feature importances metrics. 
     
-Also, the effect of demography could be reflective of unmeasured confounders. Without carefully considering the determinants of electoral performance, it's not clear if demography is of such critical importance to elctoral outcomes. 
+Also, the effect of demography could be reflective of unmeasured confounders. Without carefully considering the determinants of electoral performance, it's not clear if demography is of such critical importance to electoral outcomes. 
 
 Notes: 
 
