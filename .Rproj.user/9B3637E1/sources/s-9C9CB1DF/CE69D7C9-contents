@@ -35,7 +35,7 @@ Here is a plot of the distribution of the sum of age and race variables in the e
 
 ![](/img/output_52_0.png)
 
-To deal with the collinearity, Terence Parr, Kerem Turgutlu, Christopher Csiszar, and Jeremy Howard suggest to use drop-column importance in conjunction with the permutation importances metric. In contrast with the default feature importance metric, which measures the mean decrease in impurity, the permutation score introduces noise to a column and then calculates the drop in the score from the baseline score. Do the following: 
+To deal with the collinearity, Terence Parr, Kerem Turgutlu, Christopher Csiszar, and Jeremy Howard suggest to use drop-column importance in conjunction with the permutation importances metric. In contrast with the default feature importance metric, which measures the mean decrease in impurity, the permutation score permutates a column and then calculates the drop in the score from the baseline score. Do the following: 
 
 * compute baseline feature importance with permutation importance 
 * drop a column, retrain, and then recompute feature importance scores
