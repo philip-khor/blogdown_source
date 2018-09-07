@@ -263,7 +263,7 @@ The F-stat is provided for the first stage: a rule of thumb is to have an F-stat
 |&nbsp;|Race|Age|
 |-----|----|---|
 |F-stat|65.430|119.093|
-|`\hat \beta_{LW}$`|.00073|-.00053|
+|`$\hat \beta_{LW}$`|.00073|-.00053|
 
 ![](/img/dagitty-model.png)
 

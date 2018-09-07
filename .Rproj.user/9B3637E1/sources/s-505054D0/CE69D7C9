@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "377438750",
+    "hash" : "0",
     "id" : "CE69D7C9",
-    "lastKnownWriteTime" : 1536326058,
-    "last_content_update" : 1536326058439,
+    "lastKnownWriteTime" : 1536331600,
+    "last_content_update" : 1536331601015,
     "path" : "~/blogdown_source/blogdown_source/content/post/2018-08-27-exploring-ge14-results-with-python-part-2.md",
     "project_path" : "content/post/2018-08-27-exploring-ge14-results-with-python-part-2.md",
     "properties" : {
-        "cursorPosition" : "274,8",
-        "scrollLine" : "274"
+        "cursorPosition" : "265,3",
+        "scrollLine" : "260"
     },
     "read_only" : false,
     "read_only_alternatives" : [
