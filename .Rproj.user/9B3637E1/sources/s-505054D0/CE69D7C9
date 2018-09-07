@@ -2,18 +2,18 @@
     "collab_server" : "",
     "contents" : "",
     "created" : 1535348296711.000,
-    "dirty" : true,
+    "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "377438750",
     "id" : "CE69D7C9",
-    "lastKnownWriteTime" : 1535382522,
-    "last_content_update" : 1535457495760,
+    "lastKnownWriteTime" : 1536326058,
+    "last_content_update" : 1536326058439,
     "path" : "~/blogdown_source/blogdown_source/content/post/2018-08-27-exploring-ge14-results-with-python-part-2.md",
     "project_path" : "content/post/2018-08-27-exploring-ge14-results-with-python-part-2.md",
     "properties" : {
-        "cursorPosition" : "37,328",
-        "scrollLine" : "34"
+        "cursorPosition" : "274,8",
+        "scrollLine" : "274"
     },
     "read_only" : false,
     "read_only_alternatives" : [

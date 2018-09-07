@@ -35,7 +35,7 @@ Here is a plot of the distribution of the sum of age and race variables in the e
 
 ![](/img/output_52_0.png)
 
-To deal with the collinearity, Terence Parr, Kerem Turgutlu, Christopher Csiszar, and Jeremy Howard suggest to use drop-column importance in conjunction with the permutation importances metric. In contrast with the default feature importance metric, which measures the mean decrease in impurity, the permutation score introduces noise to a column and then calculates the drop in the score from the baseline score. Do the following: 
+To deal with the collinearity, Terence Parr, Kerem Turgutlu, Christopher Csiszar, and Jeremy Howard suggest to use drop-column importance in conjunction with the permutation importances metric. In contrast with the default feature importance metric, which measures the mean decrease in impurity, the permutation score permutates a column and then calculates the drop in the score from the baseline score. Do the following: 
 
 * compute baseline feature importance with permutation importance 
 * drop a column, retrain, and then recompute feature importance scores
@@ -249,7 +249,7 @@ I follow the estimation procedure in Vosters & Nybom (2016):
 3. Calculate `$$\beta_{LW}=\rho_1\phi_1 + \rho_2 \phi_2 + \rho_3 \phi_3 + ... + \rho_k \phi_k$$`
 where `$\rho_1 = 1$`.
 
-To be on the safe side, I assume a linear probability model, where the outcome of interest is whether Pakatan Harapan wins the seat. I'm not too familiar with the literature, but I couldn't really find it being used in a classification problem before, so I'm not sure if it's shown to be appropraite for the logistic model. 
+To be on the safe side, I assume a linear probability model, where the outcome of interest is whether Pakatan Harapan wins the seat. I'm not too familiar with the literature, but I couldn't really find it being used in a classification problem before, so I'm not sure if it's shown to be appropriate for the logistic model. 
 
 And since I can't figure out how to properly construct my standard errors, you'll just have to make do with estimates. 
 
@@ -263,7 +263,7 @@ The F-stat is provided for the first stage: a rule of thumb is to have an F-stat
 |&nbsp;|Race|Age|
 |-----|----|---|
 |F-stat|65.430|119.093|
-|`$\beta_{LW}$`|.00073|-.00053|
+|`\hat \beta_{LW}$`|.00073|-.00053|
 
 ![](/img/dagitty-model.png)
 
@@ -272,14 +272,14 @@ The F-stat is provided for the first stage: a rule of thumb is to have an F-stat
 |&nbsp;|Race|Age|
 |-----|----|---|
 |F-stat|32.288|96.985|
-|`$\beta_{LW}$`|-0.041|0.072|
+|`$\hat \beta_{LW}$`|-0.041|0.072|
 
 * However, it's not clear that demographic factors should be considered separately. Putting race and ethnicity variables together, the estimated L-W effect spikes. 
 
 |&nbsp;|Demography|
 |-----|----|
 |F-stat|119.093|
-|`$\beta_{LW}$`|0.971|
+|`$\hat \beta_{LW}$`|0.971|
 
 Interestingly, this result seems to confirm what we've seen in the random forests feature importances scores. 
 
