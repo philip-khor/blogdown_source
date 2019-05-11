@@ -1,5 +1,5 @@
 theme = "hugo-paper"
-baseURL = "http://philip-khor.github.io/"
+baseURL = "https://philip-khor.github.io/"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 languageCode = "en-us"
 title = "Philip's Curve"
