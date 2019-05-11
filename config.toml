@@ -5,7 +5,6 @@ languageCode = "en-us"
 title = "Philip's Curve"
 publishDir = "../philip-khor.github.io"
 disqusShortname = "philips-curve"
-highlightjsTheme = "solarize-dark"
   
 [menu] 
   [[menu.main]] 
