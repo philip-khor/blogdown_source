@@ -24,16 +24,16 @@ Specifically, I learned along the way that you should use NULL for optional argu
 
 ## Vectorise
 
-The BNM API allows the user to access some variables with daily measures. Ideally, bnmr functions should be vectorised, so that I could simply call `interest_rate(year = 2019)` and obtain interest rates throughout 2019. However, the daily API endpoints only have three options - do not specify anything, specify date, or specify year/month combination. To obtain interest rates in a given year, therefore, one would have to make the following GET requests:
+The BNM API allows the user to access some variables with daily measures. Ideally, bnmr functions should be vectorised, so that I could simply call `interest_rate(year = 2019)` and obtain interest rates throughout 2019. However, the daily API endpoints only have three options - do not specify anything, specify date, or specify year/month combination. To obtain interest rates in a given year, you would have to make the following GET requests:
 
 - GET interest-rate/year/2019/month/1
 - GET interest-rate/year/2019/month/2
 - GET interest-rate/year/2019/month/3
 - GET interest-rate/year/2019/month/4
 
-Right now `interest_rate(year = 2019)` works. The API seems to have a very low request limit, such that with a few attempts I run into a HTTP 429 error.
+Right now `interest_rate(year = 2019)` works. The API seems to have a very low request limit. After a few attempts I run into a HTTP 429 error.
 
-I sloppily included some preliminary vectorisation code in `opr()`, which returns the overnight policy rate. However, place too many simultaneous API calls and the API will stop responding. Right now, I simply add a short time stop in between calls.
+I sloppily included some preliminary vectorisation code in `opr()`, which returns the overnight policy rate. However, place too many simultaneous API calls and the API will stop responding. Right now, I add a short time stop in between calls.
 
 Moving forward, I'll be working on [exposing errors within vectorised operations](https://gist.github.com/stephlocke/dc72be42e39997bef894dfc95b67fd8a).
 
@@ -47,7 +47,7 @@ pkgdown makes it very simple to create a [website](http://philip-khor.github.io/
 
 ## testing
 
-I've added test coverage and continuous integration with Travis using the usethis package. However, I have my reservations about testing too much in the case of bnmr - currently, if the API fails, the tests necessarily fail. As I'm concerned that too much testing may cause the API may reject calls, I'm currently using the in-documentation examples as my test mechanism. 
+I've added test coverage and continuous integration with Travis using the usethis package. However, I have my reservations about testing too much in the case of bnmr - currently, if the API fails, the tests necessarily fail. As I'm concerned that too much testing may cause the API to reject calls, I'm currently using the in-documentation examples as my test mechanism. 
 
 ## Interested? 
 
