@@ -7,7 +7,7 @@ tags: []
 categories: []
 ---
 
-[bnmr](/bnmr) is a wrapper for `httr` to access BNM's [recently released API](api.bnm.gov.my). I wrote this to practice writing R packages, with lots of help from the [R Packages](http://r-pkgs.had.co.nz/) book. 
+[bnmr](/bnmr) is a wrapper for `httr` to access BNM (Malaysia's central bank)'s [recently released API](api.bnm.gov.my). I wrote this to practice writing R packages, with lots of help from the [R Packages](http://r-pkgs.had.co.nz/) book. 
 
 Using bnmr is really simple, e.g. to get interest rate data in January 2019: 
 
