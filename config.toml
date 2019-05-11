@@ -1,21 +1,21 @@
 theme = "hugo-paper"
 baseURL = "http://philip-khor.github.io/"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 languageCode = "en-us"
 title = "Philip's Curve"
-publishDir = "C:/Users/Philip/Documents/phikh.github.io/philip-khor.github.io"
+publishDir = "../philip-khor.github.io"
 disqusShortname = "philips-curve"
-
+highlightjsTheme = "solarize-dark"
+  
 [menu] 
   [[menu.main]] 
     identifier = "twitter"
     name = "twitter"
-    pre = '<i class="fab fa-twitter"></i>'
     url = "https://twitter.com/philip_khor"
     
   [[menu.main]]
     identifier = "linkedin"
     name = "linkedin"
     pre = '<i class="fab fa-linkedin-in"></i>'
-    url = "https://www.linkedin.com/in/khorp/"
-    
+    url = "https://www.linkedin.com/in/philip-khor/"
     
