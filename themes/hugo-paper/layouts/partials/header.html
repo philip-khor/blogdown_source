@@ -18,11 +18,13 @@
     {{- if eq .Kind "page" }}
     <meta name="description" content="{{ .Summary }}">
     <meta property="og:description" content="{{ .Summary }}">
+    <meta property="og:type" content="article">
     <meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
     {{ else }}
     <meta name="description" content="{{ .Site.Params.description }}">
     <meta property="og:description" content="{{ .Site.Params.description }}">
     <meta name="author" content="{{ .Site.Params.author }}">
+    <meta property="og:type" content="website">
     {{ end -}}
     <!-- Styles -->
     <link href="{{.Site.BaseURL}}css/github-gist.min.css" rel="stylesheet">
