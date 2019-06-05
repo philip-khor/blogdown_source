@@ -113,9 +113,9 @@ lm.fit(X = data[["x1", "x2"]], y = data.y)
 lm.coef_
 ```
 
-source: https://knowyourmeme.com/photos/1250147-yamero
 
 
     array([0.39728922, 0.79457845])
 
+source: https://knowyourmeme.com/photos/1250147-yamero
 
