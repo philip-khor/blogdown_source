@@ -101,7 +101,7 @@ res.summary()
 </tr>
 </table><br/><br/>Warnings:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The smallest eigenvalue is 8.01e-30. This might indicate that there are<br/>strong multicollinearity problems or that the design matrix is singular.
 
-![](https://i.kym-cdn.com/photos/images/original/001/250/147/e6f.jpg)
+![](/img/e6f.jpg)
 
 Neither does the popular machine learning package Scikit-Learn: 
 
@@ -113,7 +113,7 @@ lm.fit(X = data[["x1", "x2"]], y = data.y)
 lm.coef_
 ```
 
-
+source: https://knowyourmeme.com/photos/1250147-yamero
 
 
     array([0.39728922, 0.79457845])
