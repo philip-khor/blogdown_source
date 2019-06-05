@@ -29,7 +29,7 @@ x1 = np.arange(30)
 x2 = 2 * x1
 
 y = 2 * x1 + e
-data = pd.DataFrame({"y": y, "x": x1, "x2": x2})
+data = pd.DataFrame({"y": y, "x1": x1, "x2": x2})
 ```
 
 
@@ -80,10 +80,10 @@ res.summary()
   <th>Intercept</th> <td>    0.3681</td> <td>    0.288</td> <td>    1.277</td> <td> 0.212</td> <td>   -0.222</td> <td>    0.959</td>
 </tr>
 <tr>
-  <th>x</th>         <td>    0.3973</td> <td>    0.003</td> <td>  116.364</td> <td> 0.000</td> <td>    0.390</td> <td>    0.404</td>
+  <th>x1</th>         <td>    0.3973</td> <td>    0.003</td> <td>  116.364</td> <td> 0.000</td> <td>    0.390</td> <td>    0.404</td>
 </tr>
 <tr>
-  <th>collinear</th> <td>    0.7946</td> <td>    0.007</td> <td>  116.364</td> <td> 0.000</td> <td>    0.781</td> <td>    0.809</td>
+  <th>x2</th> <td>    0.7946</td> <td>    0.007</td> <td>  116.364</td> <td> 0.000</td> <td>    0.781</td> <td>    0.809</td>
 </tr>
 </table>
 <table class="simpletable">
@@ -109,7 +109,7 @@ Neither does the popular machine learning package Scikit-Learn:
 ```python
 from sklearn.linear_model import LinearRegression
 lm = LinearRegression()
-lm.fit(X = data[["x", "collinear"]], y = data.y)
+lm.fit(X = data[["x1", "x2"]], y = data.y)
 lm.coef_
 ```
 
