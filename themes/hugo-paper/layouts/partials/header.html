@@ -7,8 +7,7 @@
     <!-- Title -->
     <title>
       {{- if not .IsHome }}
-      {{- if eq .Kind "page" }}
-      <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+      {{- if eq .Kind "page" }}{{ .Title }}
       {{- else if eq .Data.Singular "tag" }}{{ .Data.Term }}
       {{- else }}Posts
       {{- end }} - {{ end }}
@@ -16,6 +15,7 @@
     </title>
     <!-- Meta -->
     {{- if eq .Kind "page" }}
+    <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
     <meta name="description" content="{{ .Summary }}">
     <meta property="og:description" content="{{ .Summary }}">
     <meta property="og:type" content="article">
