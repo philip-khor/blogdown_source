@@ -25,16 +25,16 @@ e = np.random.normal(size = 30)
 
 # creating two variables x and collinear 
 # where collinear is just 2 times x
-x = np.arange(30)
-collinear = 2 * x
+x1 = np.arange(30)
+x2 = 2 * x1
 
-y = 2 * x + e
-data = pd.DataFrame({"y": y, "x": x, "collinear": collinear})
+y = 2 * x1 + e
+data = pd.DataFrame({"y": y, "x": x1, "x2": x2})
 ```
 
 
 ```python
-model = smf.ols("y ~ x + collinear", data = data)
+model = smf.ols("y ~ x1 + x2", data = data)
 res = model.fit()
 res.summary()
 ```
