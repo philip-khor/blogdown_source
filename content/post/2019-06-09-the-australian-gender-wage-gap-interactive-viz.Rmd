@@ -7,7 +7,7 @@ categories: [ggplot2, wage-gap]
 tags: []
 ---
 
-I wrote a piece at [The Ambitious Economist](https://theambitiouseconomist.com/an-analysis-of-the-gender-wage-gap-in-australia/) on Australia's gender wage gap with some good ol' ggplot2 dataviz. However, there was a chart showing the gender wage gap by occupation that could have benefited from some interactive visualisation. Fortunately, the R package plotly makes this quite simple, with just two more lines of code ... 
+I wrote a piece at [The Ambitious Economist](https://theambitiouseconomist.com/an-analysis-of-the-gender-wage-gap-in-australia/) on Australia's gender wage gap with some good ol' `ggplot2` dataviz. However, there was a chart showing the gender wage gap by occupation that could have benefited from some interactive visualisation. Fortunately, the R package plotly makes this quite simple, with just two more lines of code ... 
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
 library(readxl)
