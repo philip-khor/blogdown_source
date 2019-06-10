@@ -4,10 +4,12 @@ author: "Philip Khor"
 date: '2019-06-09'
 slug: the-australian-gender-wage-gap-interactive-viz
 categories: [ggplot2, wage-gap]
+summary: "Some more dataviz"
 tags: []
 ---
 
 I wrote a piece at [The Ambitious Economist](https://theambitiouseconomist.com/an-analysis-of-the-gender-wage-gap-in-australia/) on Australia's gender wage gap with some good ol' `ggplot2` dataviz. However, there was a chart showing the gender wage gap by occupation that could have benefited from some interactive visualisation. Fortunately, the R package plotly makes this quite simple, with just two more lines of code ... 
+
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
 library(readxl)

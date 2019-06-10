@@ -3,6 +3,7 @@ title: 'PSA: Python, OLS and perfectly collinear variables'
 author: "Philip Khor"
 date: '2019-06-05'
 slug: psa-python-ols-and-perfectly-collinear-variables
+summary: "Unlike most implementations of linear models, Python packages don't usually drop perfectly collinear variables."
 categories: ["econometrics"]
 tags: []
 ---
