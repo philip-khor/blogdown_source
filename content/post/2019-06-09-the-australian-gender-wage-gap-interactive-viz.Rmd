@@ -5,9 +5,12 @@ date: '2019-06-09'
 slug: the-australian-gender-wage-gap-interactive-viz
 categories: [ggplot2, wage-gap]
 summary: "Some more dataviz"
-img:
-  src: "plotlys/wages-and-salaries.html"
-  alt: ""
+player:
+  title: "Gender gap by occupation"
+  player: "https://blog.philipscurve.com/plotlys/wages-and-salaries.html"
+  image: "https://blog.philipscurve.com/img/newplot.png"
+  width: 607
+  height: 446
 tags: []
 ---
 

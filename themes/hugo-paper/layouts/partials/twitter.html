@@ -9,3 +9,14 @@
     <meta name="twitter:image:alt" content="{{ .alt }}">
 {{ end }}
 {{ end }}
+{{ if isset .Params "player"}}
+{{ with .Params.player }}
+    <meta name="twitter:card" content="player">
+    <meta name="twitter:site" content="@philip_khor">
+    <meta name="twitter:player" content="{{ .player }}">
+    <meta name="twitter:title" content="{{ .title }}">
+    <meta name="twitter:player:width" content="{{ .width }}">
+    <meta name="twitter:player:height" content="{{ .height }}">
+    <meta name="twitter:image" content="{{ .image }}">
+{{ end }}
+{{ end }}
