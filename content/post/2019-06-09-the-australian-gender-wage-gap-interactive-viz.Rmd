@@ -4,7 +4,7 @@ author: "Philip Khor"
 date: '2019-06-09'
 slug: the-australian-gender-wage-gap-interactive-viz
 categories: [ggplot2, wage-gap]
-summary: "Some more dataviz"
+summary: "A little more dataviz"
 player:
   title: "Gender gap by occupation"
   player: "https://blog.philipscurve.com/plotlys/wages-and-salaries.html"
