@@ -125,6 +125,7 @@ subset_14b %>%
 ```{r message=FALSE, warning=FALSE}
 library(plotly)
 ggplotly(p, tooltip = c("female_pct_male", "occupation")) %>% 
-  layout(showlegend = FALSE) -> p1
+  layout(showlegend = FALSE) %>% 
+  config(displayModeBar = FALSE) -> p1
 p1
 ```
