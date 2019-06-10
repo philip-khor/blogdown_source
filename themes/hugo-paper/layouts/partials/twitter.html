@@ -1,0 +1,11 @@
+<!--from https://gist.github.com/fgandiya/a8f91c2b27ec1dac0374a940b438561f-->
+
+<meta name="twitter:site" content="{{ .Site.Title }}">
+<meta name="twitter:title" content="{{ .Title }}">
+{{ if isset .Params "img" }}
+{{ with .Params.img }}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ .src }}">
+    <meta name="twitter:image:alt" content="{{ .alt }}">
+{{ end }}
+{{ end }}
