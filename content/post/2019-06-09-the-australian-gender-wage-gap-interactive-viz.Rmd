@@ -1,0 +1,128 @@
+---
+title: 'The Australian gender wage gap: interactive viz'
+author: ~
+date: '2019-06-09'
+slug: the-australian-gender-wage-gap-interactive-viz
+categories: [ggplot2, wage-gap]
+tags: []
+---
+
+I wrote a piece at [The Ambitious Economist](https://theambitiouseconomist.com/an-analysis-of-the-gender-wage-gap-in-australia/) on Australia's gender wage gap with some good ol' ggplot2 dataviz. However, there was a chart showing the gender wage gap by occupation that could have benefited from some interactive visualisation. Fortunately, the R package plotly makes this quite simple, with just two more lines of code ... 
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(readxl)
+library(forcats)
+library(ggrepel)
+library(ggridges)
+library(here)
+library(ggbeeswarm)
+library(janitor)
+library(dplyr)
+library(stringr)
+library(tidyr)
+library(ggplot2)
+
+read_excel(here("data", 
+                "ts17individual14occupationsextaxableincomerangeyear.xlsx"), 
+           sheet = "Individual Table 14B", 
+           skip = 3, 
+           na = "na") %>% 
+  clean_names() %>% 
+  filter(sex != "i. all ranges") %>% 
+  # filter out occupation blank
+  filter(str_sub(occupation_unit_group1, 1, 1) != "0") -> tbl14b
+
+tibble(groups = 1:9, 
+       names = c("Managers", 
+                 "Professionals", 
+                 "Technicians and Trades Workers",
+                 "Community and Personal Service Workers", 
+                 "Clerical and Administrative Workers", 
+                 "Sales Workers",
+                 "Machinery Operators and Drivers", 
+                 "Labourers",
+                 "Others")) -> anzsco_main_classes
+ 
+theme_minimal_modified <- function() { 
+  theme_minimal() + 
+    theme(axis.title = element_text(color = "grey50"), 
+          panel.grid.minor = element_blank(), 
+          axis.text = element_text(color = "grey50"), 
+          plot.caption = element_text(color = "grey60"), 
+          plot.subtitle = element_text(color = "grey40"), 
+          plot.title = element_text(color = "grey20"))
+}
+
+tbl14b %>% 
+  select(-taxable_income_ranges_tax_brackets) %>% 
+  mutate(occupation = str_sub(occupation_unit_group1, 6), 
+         main_class = as.numeric(str_sub(occupation_unit_group1, 1, 1))) %>% 
+  group_by(year = income_year2, 
+           occupation, 
+           sex) %>% 
+  summarise(av_salary = sum(salary_or_wages)/sum(number_of_individuals_no), 
+            total_salary = sum(salary_or_wages),
+            n_individuals = sum(number_of_individuals_no), 
+            main_class = mean(main_class)) %>% 
+  ungroup() %>% 
+  # some sex-occupation combinations can have very few individuals within 
+  # to ensure the results aren't influenced by occupations with small numbers of individuals, 
+  # remove observations where the number of individuals is less than the 5% quantile for each year (around 62) 
+  group_by(year) %>% 
+  filter(n_individuals > quantile(n_individuals, .05)) -> tbl14b_by_occupation
+
+# now check for occupations where there's only 1 gender, then anti-join to remove 
+tbl14b_by_occupation %>% 
+  count(occupation, year) %>% 
+  filter(n == 1) -> only_one
+
+tbl14b_by_occupation %>% 
+  anti_join(only_one, by = c("occupation", "year")) -> tbl14b_by_occupation
+
+tbl14b_by_occupation %>%
+  filter(year %in% c("2013–14", "2016–17")) %>%
+  filter(!str_detect(occupation, coll("not specified"))) %>%
+  select(-total_salary, -n_individuals) %>%
+  spread(sex, av_salary) %>%
+  ungroup() %>%
+  filter(occupation != "Other") %>%
+  mutate(gap = Male - Female,
+         female_pct_male = Female / Male,
+         gap_pct = (Male - Female)/Male) %>%
+  left_join(anzsco_main_classes, by = c(main_class = "groups")) %>%
+  filter(!occupation %in% c("Occupation blank",
+                            "Miscellaneous type not specified",
+                            "Occupation not matched")) -> subset_14b
+
+subset_14b %>% 
+  select(year, female_pct_male, occupation, names) %>%
+  filter(year == "2016–17", names != "Others") %>% 
+  mutate(names = factor(names, levels = anzsco_main_classes$names), 
+         occupation_lab = ifelse(female_pct_male > 1.18 | female_pct_male < .5, occupation, ""), 
+         gap_color = female_pct_male > 1) %>% 
+  ggplot(aes(x = names, y = female_pct_male, group  = occupation, color = gap_color)) + 
+  geom_quasirandom(size = .6) + 
+  geom_text_repel(aes(label = str_wrap(occupation_lab, 10)), size = 3) + 
+  guides(color = FALSE) + 
+  # coord_flip() + 
+  scale_y_continuous(labels = function(x) scales::percent(x = x, accuracy = 2), 
+                     breaks = c(.5, 1, 1.5)) + 
+  scale_color_manual(values = c("goldenrod2", "cornflowerblue")) + 
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) + 
+  geom_hline(yintercept = 1, linetype = "dotted", color = "grey20") + 
+  theme_minimal_modified() + 
+  theme(panel.grid = element_blank()) + 
+  labs(title = "Females earn less than males in almost all occupations", 
+       x = "", 
+       y = "female / male",
+       subtitle = "Gender gaps in salaries and wages, 2016-17", 
+       caption = "Occupations defined by ANZSCO v. 1.2. \nEach data point represents an occupation. \n Salary and wages data, Taxation Statistics 2016-2017") -> p
+
+```
+
+```{r message=FALSE, warning=FALSE}
+library(plotly)
+ggplotly(p, tooltip = c("female_pct_male", "occupation")) %>% 
+  layout(showlegend = FALSE) -> p1
+p1
+```
