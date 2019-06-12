@@ -3,7 +3,7 @@ title: 'The Australian gender wage gap: interactive viz'
 author: "Philip Khor"
 date: '2019-06-09'
 slug: the-australian-gender-wage-gap-interactive-viz
-categories: [ggplot2, wage-gap]
+categories: ["ggplot2", "wage-gap"]
 summary: "A little more dataviz"
 player:
   title: "Gender gap by occupation"
