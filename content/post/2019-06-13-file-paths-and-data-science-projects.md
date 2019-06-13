@@ -1,0 +1,64 @@
+---
+title: File paths and data science projects
+author: ~
+date: '2019-06-13'
+slug: file-paths-and-data-science-projects
+categories: []
+tags: []
+draft: true
+---
+
+Large data science projects can be a pain to manage. Cookiecutter Data Science recommends the following project folder structure, and I think it's a good picture of how a data science project *should* be organized: 
+
+```
+├── README.md          
+├── data
+│   ├── external       
+│   ├── interim        
+│   ├── processed      
+│   └── raw            
+├── docs               
+├── models            
+├── notebooks          
+├── references         
+├── reports           
+│   └── figures        
+├── requirements.txt   
+├── setup.py           
+├── src                
+│   ├── __init__.py    
+│   ├── data           
+│   │   └── make_dataset.py
+│   ├── features       
+│   │   └── build_features.py
+│   ├── models         
+│   │   ├── predict_model.py
+│   │   └── train_model.py
+│   └── visualization  
+│       └── visualize.py
+```
+
+Specifically, file paths can be hard to manage, since it's not great practice to use absolute paths in your code. In R, I've gotten used to using the `here` package, which automatically detects the root folder of your project, so that to import a csv file from the `external` folder, all I have to do is 
+
+```R
+library(readr)
+read_csv(here("data", "external", "my_csv_file.csv"))
+```
+
+so long as a `.here` or `.Rproj` file is present in the project directory. 
+
+While looking for a Python alternative, I was delighted to find a package [`rootpath`](https://github.com/grimen/python-rootpath) which essentially does the same with the `rootpath.detect()` function. 
+
+```python
+import rootpath
+ROOT_DIR = rootpath.detect()
+file_path = ROOT_DIR + "/data/interim/..."
+```
+
+But this creates another issue. `rootpath` returns a path beginning in /home/<user>. Starting Jupyter from the terminal, I do not have access to the root folder, so paths simply don't work. A simple fix is to start Jupyter from `/`. 
+
+```bash
+!cd / 
+jupyter lab
+```
+
