@@ -47,6 +47,8 @@ read_csv(here("data", "external", "my_csv_file.csv"))
 
 so long as a `.here` or `.Rproj` file is present in the project directory. 
 
+Previously, I used `..` a lot, which references the directory above the current directory. However, if you move your files around, you'll have to change your file paths too. 
+
 While looking for a Python alternative, I was delighted to find a package [`rootpath`](https://github.com/grimen/python-rootpath) which essentially does the same with the `rootpath.detect()` function. 
 
 ```python
