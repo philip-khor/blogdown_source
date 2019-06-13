@@ -40,7 +40,7 @@ Large data science projects can be a pain to manage. Cookiecutter Data Science r
 
 Specifically, file paths can be hard to manage, since it's not great practice to use absolute paths in your code. In R, I've gotten used to using the `here` package, which automatically detects the root folder of your project, so that to import a csv file from the `external` folder, all I have to do is 
 
-```R
+```{r eval=FALSE}
 library(readr)
 read_csv(here("data", "external", "my_csv_file.csv"))
 ```

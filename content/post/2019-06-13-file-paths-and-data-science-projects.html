@@ -1,0 +1,50 @@
+---
+title: File paths and data science projects
+author: "Philip Khor"
+date: '2019-06-13'
+summary: "Some thoughts on keeping a data science project tidy."
+slug: file-paths-and-data-science-projects
+categories: []
+tags: []
+---
+
+
+
+<p>Large data science projects can be a pain to manage. Cookiecutter Data Science recommends the following project folder structure, and I think it’s a good picture of how a data science project <em>should</em> be organized:</p>
+<pre><code>├── README.md          
+├── data
+│   ├── external       
+│   ├── interim        
+│   ├── processed      
+│   └── raw            
+├── docs               
+├── models            
+├── notebooks          
+├── references         
+├── reports           
+│   └── figures        
+├── requirements.txt   
+├── setup.py           
+├── src                
+│   ├── __init__.py    
+│   ├── data           
+│   │   └── make_dataset.py
+│   ├── features       
+│   │   └── build_features.py
+│   ├── models         
+│   │   ├── predict_model.py
+│   │   └── train_model.py
+│   └── visualization  
+│       └── visualize.py</code></pre>
+<p>Specifically, file paths can be hard to manage, since it’s not great practice to use absolute paths in your code. In R, I’ve gotten used to using the <code>here</code> package, which automatically detects the root folder of your project, so that to import a csv file from the <code>external</code> folder, all I have to do is</p>
+<pre class="r"><code>library(readr)
+read_csv(here(&quot;data&quot;, &quot;external&quot;, &quot;my_csv_file.csv&quot;))</code></pre>
+<p>so long as a <code>.here</code> or <code>.Rproj</code> file is present in the project directory.</p>
+<p>Previously, I used <code>..</code> a lot, which references the directory above the current directory. However, if you move your files around, you’ll have to change your file paths too.</p>
+<p>While looking for a Python alternative, I found a package <a href="https://github.com/grimen/python-rootpath"><code>rootpath</code></a> which essentially does the same with the <code>rootpath.detect()</code> function.</p>
+<pre class="python"><code>import rootpath
+import os 
+
+ROOT_DIR = rootpath.detect()
+os.chdir(ROOT_DIR)
+file_path = &quot;data/interim/...&quot;</code></pre>

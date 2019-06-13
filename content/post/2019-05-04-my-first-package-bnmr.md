@@ -2,6 +2,7 @@
 title: 'My first package: bnmr'
 author: "Philip Khor"
 date: '2019-05-04'
+summary: "A wrapper to access Malaysia's central bank's API"
 slug: my-first-package-bnmr
 tags: []
 categories: []
