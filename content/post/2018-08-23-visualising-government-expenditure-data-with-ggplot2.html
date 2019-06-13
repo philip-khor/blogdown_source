@@ -3,6 +3,7 @@ title: Visualising government expenditure data with ggplot2
 author: Philip Khor
 date: '2018-08-24'
 slug: visualising-government-expenditure-data-with-ggplot2
+summary: "Visualising Malaysia's stagnating development expenditure"
 categories:
   - R
 tags:
@@ -15,11 +16,33 @@ tags:
 <p>I thought I’d practice my rusty R skills when I came across a post by Khairil Yusof on the Sinar Project Facebook group that Malaysian Administrative Modernisation and Management Planning Unit (MAMPU) has made data on development expenditure over time available on data.gov.my. I haven’t paid close enough attention to government budgets to have much comments about the trends, but a comment can be found <a href="https://penanginstitute.org/programmes/penang-institute-in-kuala-lumpur/1038-analysing-malaysias-development-expenditure-in-the-federal-budget-from-2004-to-2018/">here</a>. Tl;dr, the authors note that Malaysia’s stagnating development expenditure is concerning since Malaysia is a developing economy.</p>
 <p>My thinking while constructing this plot was to contrast the growth in each category of expenditure against the overall growth in development expenditure over time. I’m thinking about also including the trend in each category of expenditure within each facet.</p>
 <p>Data is obtained from <a href="http://www.data.gov.my/data/ms_MY/dataset/perbelanjaan-pembangunan-kerajaan-persekutuan/resource/7a5c73ab-7496-4aa6-a924-a1d0e1fff53d">data.gov.my</a>. A cleaned version of the data is available <a href="https://www.dropbox.com/s/m546u01hsf8zvb2/malaysiaDevExp.csv?dl=1">here</a>.</p>
-<pre class="r"><code>library(readxl)
-library(tidyverse)</code></pre>
-<pre class="r"><code>malaysiaDevExp &lt;- read_excel(&quot;~/malaysiaDevExp.xlsx&quot;)
-
-# create separate dataframe for background totals
+<pre class="r"><code>library(readr)
+library(tidyverse)
+library(here)</code></pre>
+<pre class="r"><code>malaysiaDevExp &lt;- read_csv(here(&quot;data&quot;, &quot;malaysiaDevExp.csv&quot;))</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   Year = col_double(),
+##   EconomyTotal = col_double(),
+##   AgroRuralDev = col_double(),
+##   PublicAmenities = col_double(),
+##   TradeAndIndustry = col_double(),
+##   Transport = col_double(),
+##   Connectivity = col_double(),
+##   Environment = col_double(),
+##   OtherEconomy = col_double(),
+##   SocialTotal = col_double(),
+##   EducationTraining = col_double(),
+##   Health = col_double(),
+##   Housing = col_double(),
+##   OtherSocial = col_double(),
+##   SafetyTotal = col_double(),
+##   Defence = col_double(),
+##   HomelandSecurity = col_double(),
+##   PublicAdmin = col_double(),
+##   Total = col_double()
+## )</code></pre>
+<pre class="r"><code># create separate dataframe for background totals
 malaysiaDevExp %&gt;% 
   select(Year, Value = Total) %&gt;% 
   mutate(Year = as.numeric(Year), 

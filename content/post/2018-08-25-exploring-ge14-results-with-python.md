@@ -3,6 +3,7 @@ title: Exploring GE14 results with Python (part 1)
 author: Philip Khor
 date: '2018-08-25'
 slug: exploring-ge14-results-with-python
+summary: "Some exploratory insights from the 14th Malaysian general election"
 categories:
   - Python
 tags:

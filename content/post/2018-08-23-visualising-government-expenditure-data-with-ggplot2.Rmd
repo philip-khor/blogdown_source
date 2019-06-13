@@ -3,6 +3,7 @@ title: Visualising government expenditure data with ggplot2
 author: Philip Khor
 date: '2018-08-24'
 slug: visualising-government-expenditure-data-with-ggplot2
+summary: "Visualising Malaysia's stagnating development expenditure"
 categories:
   - R
 tags:
@@ -17,13 +18,15 @@ My thinking while constructing this plot was to contrast the growth in each cate
 Data is obtained from [data.gov.my](http://www.data.gov.my/data/ms_MY/dataset/perbelanjaan-pembangunan-kerajaan-persekutuan/resource/7a5c73ab-7496-4aa6-a924-a1d0e1fff53d). A cleaned version of the data is available [here](https://www.dropbox.com/s/m546u01hsf8zvb2/malaysiaDevExp.csv?dl=1). 
 
 
+
 ```{r message=FALSE, warning=FALSE}
-library(readxl)
+library(readr)
 library(tidyverse)
+library(here)
 ```
 
 ```{r}
-malaysiaDevExp <- read_excel("~/malaysiaDevExp.xlsx")
+malaysiaDevExp <- read_csv(here("data", "malaysiaDevExp.csv"))
 
 # create separate dataframe for background totals
 malaysiaDevExp %>% 

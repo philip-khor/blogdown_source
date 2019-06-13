@@ -3,6 +3,7 @@ title: Exploring GE14 results with Python (part 2)
 author: Philip Khor
 date: '2018-08-31'
 slug: exploring-ge14-results-with-python-2
+summary: "Can we use machine learning to understand the demographic factors underlying the election results?"
 categories:
   - Python
 tags:
