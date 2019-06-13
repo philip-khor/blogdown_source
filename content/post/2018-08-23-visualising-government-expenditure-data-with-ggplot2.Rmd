@@ -6,9 +6,7 @@ slug: visualising-government-expenditure-data
 summary: "Visualising Malaysia's stagnating development expenditure"
 categories:
   - R
-tags:
-  - ggplot2
-  - malaysia
+tags: ["ggplot2", "malaysia"]
 ---
 
 I thought I'd practice my rusty R skills when I came across a post by Khairil Yusof on the Sinar Project Facebook group that Malaysian Administrative Modernisation and Management Planning Unit (MAMPU) has made data on development expenditure over time available on data.gov.my. I haven't paid close enough attention to government budgets to have much comments about the trends, but a comment can be found [here](https://penanginstitute.org/programmes/penang-institute-in-kuala-lumpur/1038-analysing-malaysias-development-expenditure-in-the-federal-budget-from-2004-to-2018/). Tl;dr, the authors note that Malaysia's stagnating development expenditure is concerning since Malaysia is a developing economy. 
