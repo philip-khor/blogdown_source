@@ -1,11 +1,11 @@
 ---
 title: File paths and data science projects
-author: ~
+author: "Philip Khor"
 date: '2019-06-13'
+description: "Some thoughts on keeping a data science project tidy."
 slug: file-paths-and-data-science-projects
 categories: []
 tags: []
-draft: true
 ---
 
 Large data science projects can be a pain to manage. Cookiecutter Data Science recommends the following project folder structure, and I think it's a good picture of how a data science project *should* be organized: 
@@ -49,7 +49,7 @@ so long as a `.here` or `.Rproj` file is present in the project directory.
 
 Previously, I used `..` a lot, which references the directory above the current directory. However, if you move your files around, you'll have to change your file paths too. 
 
-While looking for a Python alternative, I was delighted to find a package [`rootpath`](https://github.com/grimen/python-rootpath) which essentially does the same with the `rootpath.detect()` function. 
+While looking for a Python alternative, I found a package [`rootpath`](https://github.com/grimen/python-rootpath) which essentially does the same with the `rootpath.detect()` function. 
 
 ```python
 import rootpath
