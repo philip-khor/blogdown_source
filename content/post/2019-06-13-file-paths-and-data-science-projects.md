@@ -2,7 +2,7 @@
 title: File paths and data science projects
 author: "Philip Khor"
 date: '2019-06-13'
-description: "Some thoughts on keeping a data science project tidy."
+summary: "Some thoughts on keeping a data science project tidy."
 slug: file-paths-and-data-science-projects
 categories: []
 tags: []
