@@ -2,7 +2,7 @@
 title: Visualising government expenditure data with ggplot2
 author: Philip Khor
 date: '2018-08-24'
-slug: visualising-government-expenditure-data-with-ggplot2
+slug: visualising-government-expenditure-data
 summary: "Visualising Malaysia's stagnating development expenditure"
 categories:
   - R
