@@ -53,14 +53,12 @@ While looking for a Python alternative, I was delighted to find a package [`root
 
 ```python
 import rootpath
+import os 
+
 ROOT_DIR = rootpath.detect()
-file_path = ROOT_DIR + "/data/interim/..."
+os.chdir(ROOT_DIR)
+file_path = "data/interim/..."
 ```
 
-But this creates another issue. `rootpath` returns a path beginning in /home/<user>. Starting Jupyter from the terminal, I do not have access to the root folder, so paths simply don't work. A simple fix is to start Jupyter from `/`. 
 
-```bash
-!cd / 
-jupyter lab
-```
 
